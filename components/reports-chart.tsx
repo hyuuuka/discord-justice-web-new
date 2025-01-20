@@ -6,11 +6,11 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 
 export function ReportsChart() {
   const data = [
-    { name: "Spam", value: 1 },
-    { name: "Harassment", value: 3 },
-    { name: "Scam", value: 5 },
-    { name: "NSFW Content", value: 9 },
-    { name: "Hate Speech", value: 2 },
+    { name: "Scamming", value: 1 },
+    { name: "Nsfw Content", value: 3 },
+    { name: "Child Exploitation", value: 5 },
+    { name: "Malicious Links ", value: 9 },
+    { name: "Doxxing", value: 2 },
   ];
 
   const sortedData = [...data].sort((a, b) => b.value - a.value)
