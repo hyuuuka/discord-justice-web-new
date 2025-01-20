@@ -12,9 +12,15 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center md:items-end gap-4">
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-[#4558ff]"><FaDiscord size={24} /></a>
-              <a href="#" className="text-white hover:text-[#4558ff]"><FaTwitter size={24} /></a>
-              <a href="#" className="text-white hover:text-[#4558ff]"><FaGithub size={24} /></a>
+              <a href="https://dsc.gg/discord-justice" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#4558ff]">
+                <FaDiscord size={24} />
+              </a>
+              <a href="https://twitter.com/@placeholder" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#4558ff]">
+                <FaTwitter size={24} />
+              </a>
+              <a href="https://github.com/hyuuuka/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#4558ff]">
+                <FaGithub size={24} />
+              </a>
             </div>
             <div className="flex gap-4 text-sm">
               <Link href="/learn-more" className="hover:text-blue-400">Learn More</Link>
@@ -30,4 +36,3 @@ export default function Footer() {
     </footer>
   )
 }
-
