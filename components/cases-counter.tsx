@@ -6,7 +6,7 @@ import { Gavel } from 'lucide-react'
 
 export default function CasesCounter() {
   const [count, setCount] = useState(0)
-  const targetCount = 1000
+  const targetCount = 13
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
