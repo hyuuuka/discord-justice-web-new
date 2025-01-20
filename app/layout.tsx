@@ -9,8 +9,10 @@ export const metadata: Metadata = {
   },
   description: 'Protecting Discord communities and fighting scammers with the power of justice!',
   icons: {
-    icon: 'https://github.com/hyuuuka/discord-justice-branding/blob/main/Enhanced-Logo-Transparent.png?raw=true',
+    icon: 'https://github.com/hyuuuka/discord-justice-branding/blob/main/Frame%202147223072%20(1).png?raw=true',
   },
+  image: 'https://github.com/hyuuuka/discord-justice-branding/blob/main/Frame%202147223072%20(1).png?raw=true', // Add your image URL here
+  themeColor: '#1F3A3D', // Change this to your desired embed color
 }
 
 export default function RootLayout({
