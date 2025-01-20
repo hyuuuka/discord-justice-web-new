@@ -38,17 +38,18 @@ export default function Header() {
             >
               {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
-            <Button
-              variant="default"
-              size="sm"
-              className="rounded-full px-6"
-            >
-              Join Now
-            </Button>
+            <Link href="https://dsc.gg/discord-justice" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="default"
+                size="sm"
+                className="rounded-full px-6"
+              >
+                Join Now
+              </Button>
+            </Link>
           </nav>
         </div>
       </div>
     </header>
   )
 }
-
