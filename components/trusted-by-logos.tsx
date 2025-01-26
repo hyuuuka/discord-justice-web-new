@@ -8,7 +8,8 @@ const logos = [
   { src: "/intel_corp.png", alt: "Intel Corp" },
   { src: "/image (3).png", alt: "British Army" },
   { src: "/agk.png", alt: "agk" },
-  { src: "/vercel.svg", alt: "vercel" },
+  { src: "/vercel-text.png", alt: "vercel" },
+  { src: "/github-icon-2.svg", alt: "github" },
 ]
 
 export function TrustedByLogos() {
