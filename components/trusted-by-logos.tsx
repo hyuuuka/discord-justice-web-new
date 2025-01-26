@@ -40,14 +40,17 @@ export function TrustedByLogos() {
   }, [])
 
   return (
-    <div className="w-full overflow-hidden py-10">
+    <div
+      className="w-full overflow-hidden py-10"
+      style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}
+    >
       <div ref={containerRef} className="flex space-x-8 whitespace-nowrap">
         {[...logos, ...logos].map((logo, index) => (
           <motion.div
             key={index}
             className="flex-shrink-0 w-40 h-20 relative"
-            initial={{ opacity: 0.5 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0.3 }}
+            whileInView={{ opacity: 0.8 }}
             transition={{ duration: 0.5 }}
           >
             <Image src={logo.src || "/placeholder.svg"} alt={logo.alt} fill className="object-contain" />
