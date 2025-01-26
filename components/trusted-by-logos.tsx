@@ -49,8 +49,8 @@ export function TrustedByLogos() {
           <motion.div
             key={index}
             className="flex-shrink-0 w-40 h-20 relative"
-            initial={{ opacity: 0.3 }}
-            whileInView={{ opacity: 0.8 }}
+            initial={{ opacity: 0.2 }}
+            whileInView={{ opacity: 0.4 }}
             transition={{ duration: 0.5 }}
           >
             <Image src={logo.src || "/placeholder.svg"} alt={logo.alt} fill className="object-contain" />
@@ -60,4 +60,5 @@ export function TrustedByLogos() {
     </div>
   )
 }
+
 
