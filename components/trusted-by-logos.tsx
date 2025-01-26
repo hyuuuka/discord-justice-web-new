@@ -5,14 +5,14 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 const logos = [
-  { src: "/placeholder-logo.svg", alt: "Company 1" },
-  { src: "/placeholder-logo.svg", alt: "Company 2" },
-  { src: "/placeholder-logo.svg", alt: "Company 3" },
-  { src: "/placeholder-logo.svg", alt: "Company 4" },
-  { src: "/placeholder-logo.svg", alt: "Company 5" },
-  { src: "/placeholder-logo.svg", alt: "Company 6" },
-  { src: "/placeholder-logo.svg", alt: "Company 7" },
-  { src: "/placeholder-logo.svg", alt: "Company 8" },
+  { src: "/intel_corp.png", alt: "Company 1" },
+  { src: "/intel_corp.png", alt: "Company 2" },
+  { src: "/intel_corp.png", alt: "Company 3" },
+  { src: "/intel_corp.png", alt: "Company 4" },
+  { src: "/intel_corp.png", alt: "Company 5" },
+  { src: "/intel_corp.png", alt: "Company 6" },
+  { src: "/intel_corp.png", alt: "Company 7" },
+  { src: "/intel_corp.png", alt: "Company 8" },
 ]
 
 export function TrustedByLogos() {
