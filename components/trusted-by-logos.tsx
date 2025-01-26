@@ -5,8 +5,8 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 const logos = [
-  { src: "/intel_corp.png", alt: "Company 1" },
-  { src: "/intel_corp.png", alt: "Company 2" },
+  { src: "/intel_corp.png", alt: "Intel Corp" },
+  { src: "/image (3).png", alt: "British Army" },
 ]
 
 export function TrustedByLogos() {
