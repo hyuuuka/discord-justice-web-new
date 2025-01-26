@@ -7,6 +7,8 @@ import { motion } from "framer-motion"
 const logos = [
   { src: "/intel_corp.png", alt: "Intel Corp" },
   { src: "/image (3).png", alt: "British Army" },
+  { src: "/agk.png", alt: "agk" },
+  { src: "/vercel.svg", alt: "vercel" },
 ]
 
 export function TrustedByLogos() {
