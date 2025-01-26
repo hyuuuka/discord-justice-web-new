@@ -1,15 +1,16 @@
 "use client"
 
-import Image from 'next/image'
-import Link from 'next/link'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import { AnimatedButton } from '../components/animated-button'
-import CasesCounter from '../components/cases-counter'
-import { AnimateIn } from '../components/animate-in'
-import { FeatureCard } from '../components/feature-card'
-import { ArrowRight, Shield, Scale, Gavel, Bot } from 'lucide-react'
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import Image from "next/image"
+import Link from "next/link"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import { AnimatedButton } from "../components/animated-button"
+import CasesCounter from "../components/cases-counter"
+import { AnimateIn } from "../components/animate-in"
+import { FeatureCard } from "../components/feature-card"
+import { TrustedByLogos } from "../components/trusted-by-logos"
+import { ArrowRight, Shield, Scale, Gavel, Bot } from "lucide-react"
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 
 export default function Home() {
   const mouseX = useMotionValue(0)
@@ -28,48 +29,54 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient text-on-gradient py-32 relative overflow-hidden">
-          <motion.div 
+          <motion.div
             className="absolute inset-0 opacity-10"
             animate={{
-              backgroundPosition: ['0% 0%', '100% 100%'],
+              backgroundPosition: ["0% 0%", "100% 100%"],
             }}
             transition={{
               duration: 20,
-              repeat: Infinity,
+              repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
             style={{
-              backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+              backgroundImage:
+                'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
             }}
           />
           <div className="container mx-auto px-4 relative text-center">
             <AnimateIn from="top" className="mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                Discord Justice System
-              </h1>
+              <h1 className="text-5xl md:text-7xl font-bold mb-4">Discord Justice System</h1>
             </AnimateIn>
             <AnimateIn from="bottom" delay={0.2}>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">Protecting communities and fighting scammers with the power of justice!</p>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Protecting communities and fighting scammers with the power of justice!
+              </p>
               <div className="flex justify-center items-center gap-8 mb-12">
                 <motion.div
                   animate={{ rotate: [0, -30, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 >
                   <Gavel size={64} />
                 </motion.div>
                 <div className="flex gap-4">
-                  <AnimatedButton 
+                  <AnimatedButton
                     className="bg-white text-blue-600 hover:bg-white/90"
-                    onClick={() => window.open('https://dsc.gg/discord-justice', '_blank')}
+                    onClick={() => window.open("https://discord.gg/your-invite", "_blank")}
                   >
                     <span className="flex items-center gap-2">
                       Join Our Server
                       <ArrowRight className="w-4 h-4" />
                     </span>
                   </AnimatedButton>
-                  <AnimatedButton 
+                  <AnimatedButton
                     className="bg-blue-600 text-white hover:bg-blue-700"
-                    onClick={() => window.open('https://dsc.gg/discord-justice-bot', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_CLIENT_ID&permissions=8&scope=bot%20applications.commands",
+                        "_blank",
+                      )
+                    }
                   >
                     <span className="flex items-center gap-2">
                       Add Justice System Bot
@@ -79,12 +86,20 @@ export default function Home() {
                 </div>
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 3, repeat: Infinity }}
+                  transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
                 >
                   <Shield size={64} />
                 </motion.div>
               </div>
             </AnimateIn>
+          </div>
+        </section>
+
+        {/* Trusted By Section */}
+        <section className="py-16 bg-background relative overflow-hidden">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-8">Trusted By</h2>
+            <TrustedByLogos />
           </div>
         </section>
 
@@ -101,19 +116,25 @@ export default function Home() {
                   transition={{ duration: 0.2 }}
                   className="rounded-lg overflow-hidden glassmorphism"
                 >
-                  <Image 
+                  <Image
                     src="https://github.com/hyuuuka/discord-justice-branding/blob/main/Main-Logo.png?raw=true"
-                    alt="Discord Justice Logo" 
-                    width={400} 
-                    height={300} 
-                    className="w-full h-auto" 
+                    alt="Discord Justice Logo"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto"
                   />
                 </motion.div>
               </AnimateIn>
               <AnimateIn from="right" className="md:w-1/2">
                 <div className="space-y-6 glassmorphism p-8 rounded-lg">
-                  <p className="text-lg">We are dedicated to maintaining a safe and fair environment within Discord communities by actively combating scammers and rule-breakers.</p>
-                  <p className="text-lg">Our team of vigilant moderators and advanced systems work tirelessly to protect users and uphold justice.</p>
+                  <p className="text-lg">
+                    We are dedicated to maintaining a safe and fair environment within Discord communities by actively
+                    combating scammers and rule-breakers.
+                  </p>
+                  <p className="text-lg">
+                    Our team of vigilant moderators and advanced systems work tirelessly to protect users and uphold
+                    justice.
+                  </p>
                   <Link href="/learn-more">
                     <AnimatedButton variant="outline">
                       <span className="flex items-center gap-2">
@@ -130,7 +151,7 @@ export default function Home() {
 
         {/* Cases Handled Section */}
         <section className="bg-gradient text-on-gradient py-32 relative overflow-hidden">
-          <motion.div 
+          <motion.div
             className="absolute inset-0 opacity-10"
             animate={{
               scale: [1, 1.1, 1],
@@ -138,12 +159,12 @@ export default function Home() {
             }}
             transition={{
               duration: 20,
-              repeat: Infinity,
+              repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
             style={{
-              backgroundImage: 'radial-gradient(circle, #ffffff 2px, transparent 2px)',
-              backgroundSize: '30px 30px',
+              backgroundImage: "radial-gradient(circle, #ffffff 2px, transparent 2px)",
+              backgroundSize: "30px 30px",
             }}
           />
           <div className="container mx-auto px-4 text-center relative">
@@ -156,22 +177,22 @@ export default function Home() {
 
         {/* Features Section */}
         <section id="features" className="bg-background py-32 relative overflow-hidden">
-          <motion.div 
+          <motion.div
             className="absolute inset-0"
             style={{
               background: `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 50%)`,
             }}
           />
-          <div 
-            className="container mx-auto px-4 relative"
-            onMouseMove={handleMouseMove}
-          >
+          <div className="container mx-auto px-4 relative" onMouseMove={handleMouseMove}>
             <AnimateIn from="bottom">
               <h2 className="text-4xl font-bold mb-16 text-center text-gradient">How We Protect</h2>
             </AnimateIn>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
               {/* Animated grid lines */}
-              <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-8 pointer-events-none" style={{ zIndex: -1 }}>
+              <div
+                className="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-8 pointer-events-none"
+                style={{ zIndex: -1 }}
+              >
                 {[...Array(4)].map((_, i) => (
                   <motion.div
                     key={`v-${i}`}
@@ -200,7 +221,7 @@ export default function Home() {
                 }}
                 transition={{
                   duration: 5,
-                  repeat: Infinity,
+                  repeat: Number.POSITIVE_INFINITY,
                   ease: "linear",
                 }}
               />
@@ -234,10 +255,12 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <AnimateIn from="bottom">
               <h2 className="text-4xl font-bold mb-8">Join the Fight Against Scammers</h2>
-              <p className="text-xl mb-12 max-w-2xl mx-auto">Be part of our community dedicated to making Discord a safer place for everyone!</p>
-              <AnimatedButton 
+              <p className="text-xl mb-12 max-w-2xl mx-auto">
+                Be part of our community dedicated to making Discord a safer place for everyone!
+              </p>
+              <AnimatedButton
                 className="bg-white text-blue-600 hover:bg-white/90"
-                onClick={() => window.open('https://dsc.gg/discord-justice', '_blank')}
+                onClick={() => window.open("https://discord.gg/your-invite", "_blank")}
               >
                 <span className="flex items-center gap-2">
                   Join Now
