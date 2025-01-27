@@ -7,10 +7,11 @@ import { motion } from "framer-motion"
 const logos = [
   { src: "/intel_corp.png", alt: "Intel Corp" },
   { src: "/image (3).png", alt: "British Army" },
-  { src: "/agk.png", alt: "agk" },
-  { src: "/vercel-text.png", alt: "vercel" },
-  { src: "/github-icon-2.svg", alt: "github" },
+  { src: "/agk.png", alt: "AGK" },
+  { src: "/vercel-text.png", alt: "Vercel" },
+  { src: "/github-icon-2.svg", alt: "Github" },
   { src: "/Cryptonel.png", alt: "Cryptonel" },
+  { src: "/rezreel.png", alt: "Rezreel" },
 ]
 
 export function TrustedByLogos() {
