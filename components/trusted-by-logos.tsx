@@ -10,6 +10,7 @@ const logos = [
   { src: "/agk.png", alt: "agk" },
   { src: "/vercel-text.png", alt: "vercel" },
   { src: "/github-icon-2.svg", alt: "github" },
+  { src: "/Cryptonel.png", alt: "Cryptonel" },
 ]
 
 export function TrustedByLogos() {
