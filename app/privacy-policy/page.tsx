@@ -20,8 +20,10 @@ const PrivacyPolicy = () => {
               <ul className="list-disc pl-6 mt-2">
                 <li>Discord user IDs and usernames</li>
                 <li>Server information</li>
-                <li>Case-related data</li>
+                <li>Case-related data (Reason, Description, Case IDs, Proofs)</li>
                 <li>Communication records</li>
+                <li>Username patterns</li>
+                <li>The bot uses a memoization system that temporarily caches user data for 5 minutes</li>
               </ul>
             </section>
 
@@ -32,6 +34,7 @@ const PrivacyPolicy = () => {
                 <li>Provide and improve our services</li>
                 <li>Investigate and resolve cases</li>
                 <li>Maintain security records</li>
+                <li>Suspicious account detection</li>
                 <li>Communicate with users</li>
               </ul>
             </section>
