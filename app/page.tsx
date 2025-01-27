@@ -62,7 +62,7 @@ export default function Home() {
                 <div className="flex gap-4">
                   <AnimatedButton
                     className="bg-white text-blue-600 hover:bg-white/90"
-                    onClick={() => window.open("https://discord.gg/your-invite", "_blank")}
+                    onClick={() => window.open("https://dsc.gg/discord-justice", "_blank")}
                   >
                     <span className="flex items-center gap-2">
                       Join Our Server
@@ -73,7 +73,7 @@ export default function Home() {
                     className="bg-blue-600 text-white hover:bg-blue-700"
                     onClick={() =>
                       window.open(
-                        "https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_CLIENT_ID&permissions=8&scope=bot%20applications.commands",
+                        "https://dsc.gg/discord-justice-bot",
                         "_blank",
                       )
                     }
@@ -260,7 +260,7 @@ export default function Home() {
               </p>
               <AnimatedButton
                 className="bg-white text-blue-600 hover:bg-white/90"
-                onClick={() => window.open("https://discord.gg/your-invite", "_blank")}
+                onClick={() => window.open("https://dsc.gg/discord-justice", "_blank")}
               >
                 <span className="flex items-center gap-2">
                   Join Now
