@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 }
 
 export default function StatusPage() {
-  // In a real-world scenario, you'd fetch this data from an API or database
+  // incident, maintenance, operational
   const botStatus = {
-    status: "maintenance" as const,
+    status: "operationl" as const,
     lastUpdated: new Date().toLocaleString(),
-    description: "Justice System is having maintenance, please check later",
+    description: "",
   }
 
   return (
