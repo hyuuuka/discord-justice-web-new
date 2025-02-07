@@ -1,10 +1,29 @@
+import type { Metadata } from "next"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { BotStatus } from "@/components/bot-status"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Bot Status | Discord Justice",
   description: "Check the current operational status of the Discord Justice bot",
+  openGraph: {
+    title: "Bot Status | Discord Justice",
+    description: "Check the current operational status of the Discord Justice bot",
+    images: [
+      {
+        url: "https://github.com/hyuuuka/discord-justice-branding/blob/main/Enhanced-Logo-Transparent.png?raw=true",
+        width: 1200,
+        height: 630,
+        alt: "Discord Justice Bot Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bot Status | Discord Justice",
+    description: "Check the current operational status of the Discord Justice bot",
+    images: ["https://github.com/hyuuuka/discord-justice-branding/blob/main/Enhanced-Logo-Transparent.png?raw=true"],
+  },
 }
 
 export default function StatusPage() {
@@ -12,7 +31,7 @@ export default function StatusPage() {
   const botStatus = {
     status: "maintenance" as const,
     lastUpdated: new Date().toLocaleString(),
-    description: "",
+    description: "Justice System is having maintenance, please check later",
   }
 
   return (
@@ -28,4 +47,3 @@ export default function StatusPage() {
     </div>
   )
 }
-
