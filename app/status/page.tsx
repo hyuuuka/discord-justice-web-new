@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default function StatusPage() {
   // incident, maintenance, operational
   const botStatus = {
-    status: "maintenance" as const,
+    status: "operational" as const,
     lastUpdated: new Date().toLocaleString(),
     description: "",
   }
