@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 225 65% 64%; /* #4558ff */
+  --primary-foreground: 0 0% 100%; /* White */
+  --secondary: 220 60% 30%; /* Darker blue */
+  --secondary-foreground: 0 0% 100%; /* White */
+  --background: 222 47% 11%; /* Dark blue-gray */
+  --foreground: 0 0% 100%; /* White */
+  --accent: 0 91% 58%; /* Red for alerts/warnings */
+  --accent-foreground: 0 0% 100%; /* White */
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600;
+  }
+
+  .justice-card {
+    @apply bg-slate-900 border border-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(69,88,255,0.3)];
+  }
+
+  .justice-button-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-all duration-200 hover:shadow-[0_0_15px_rgba(69,88,255,0.5)];
+  }
+
+  .justice-button-secondary {
+    @apply bg-transparent border border-blue-500 text-white font-medium py-2 px-6 rounded-md transition-all duration-200 hover:bg-blue-500/10 hover:shadow-[0_0_15px_rgba(69,88,255,0.3)];
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 gradient-text;
+  }
+
+  .section-container {
+    @apply container mx-auto px-4 py-16;
+  }
+}
+
